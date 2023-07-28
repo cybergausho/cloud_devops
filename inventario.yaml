@@ -1,0 +1,4 @@
+maquinas-virtuales:
+  hosts:
+    AWS:
+      ansible_host: 18.228.226.95

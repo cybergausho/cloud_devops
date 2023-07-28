@@ -1,0 +1,20 @@
+-- instalo ansible en local
+sudo apt-get install python3, ansible
+
+---- -- -- -- -- -- ----
+
+creo inventario.yaml - defino el host de la virtual por ip publica de aws.
+
+# conectar ansible con la virtual aws
+ansible all -m ping -i inventario.yaml -u admin --private-key /home/user/Descargas/debian_devops.pem 
+
+# instalar ufw en aws
+en la EC2 install ufw
+
+corro playbook para instalar nginx, copiar el archivo de app y levanto puerto 80.
+#corro playbook y config nginx
+ansible-playbook playbook.yaml -i inventario.yaml -u admin --private-key /home/user/Descargas/debian_devops.pem 
+
+si voy a la ip publica de aws, ya levanta el server
+
+
